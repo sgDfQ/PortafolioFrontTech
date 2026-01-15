@@ -151,6 +151,18 @@ nav {
   font-size: 3.5rem;
   margin-bottom: 20px;
 }
+.skill-icon img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+   animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-12px); }
+}
+
 .skill-card h3 {
   font-size: 1.4rem;
   font-weight: 600;
