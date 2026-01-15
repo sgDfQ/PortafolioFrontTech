@@ -155,12 +155,17 @@ nav {
   width: 72px;
   height: 72px;
   object-fit: contain;
-   animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
 }
 
 @keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-12px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
 }
 
 .skill-card h3 {
@@ -198,10 +203,10 @@ nav {
   flex-direction: row-reverse;
 }
 .project-image {
-  width: 40%;
-  min-height: 300px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    width: 300px;
+  height: 180px;
   border-radius: 16px;
+  overflow: auto;  
   display: flex;
   align-items: center;
   justify-content: center;
