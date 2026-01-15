@@ -32,7 +32,7 @@ html {
 
 /* Ensure anchored sections are scrolled into view below the sticky header */
 section {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 80px;
 }
 .container {
   max-width: 1200px;
@@ -447,3 +447,26 @@ footer {
     opacity: 0;
   }
 }
+/* S'applique à une propriété */
+/* on a le nom et la durée */
+transition: margin-right 4s;
+
+/* nom de la propriété | durée | retard */
+transition: margin-right 4s 1s;
+
+/* nom | durée | fonction */
+transition: margin-right 4s ease-in-out;
+
+/* nom | durée | fonction | retard */
+transition: margin-right 4s ease-in-out 1s;
+
+/* S'applique à deux propriétés */
+transition: margin-right 4s, color 1s;
+
+/* S'applique à toutes les propriétés modifiées */
+transition: all 1s ease-out;
+
+/* Valeurs globales */
+transition: inherit;
+transition: initial;
+transition: unset;
