@@ -25,6 +25,15 @@ body {
   background-color: rgba(1, 0, 0, 0.98);
   line-height: 1.6;
 }
+/* Smooth scrolling and offset for fragment links (fixes sticky header overlap) */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure anchored sections are scrolled into view below the sticky header */
+section {
+  scroll-margin-top: 100px;
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;

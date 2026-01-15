@@ -1,24 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
   // On vise les éléments qui contiennent du texte (toute la page)
-  const selector = [
-    ".logo",
-    "h1", "h2", "h3",
-    "p",
-    "a",
-    "li",
-    "label",
-    "button"
-  ].join(",");
+  // Select main textual elements but exclude anchors and nav/footer content
+  const selector = [".logo", "h1", "h2", "h3", "p", "label", "button"].join(
+    ","
+  );
 
-  const elements = Array.from(document.querySelectorAll(selector));
+  const elements = Array.from(document.querySelectorAll(selector))
+    // exclude anything inside <nav> or <footer> so links and navigation stay instant
+    .filter((el) => !el.closest("nav") && !el.closest("footer"));
 
   // On garde uniquement les éléments qui ont du texte
   const items = elements
-    .map(el => ({
+    .map((el) => ({
       el,
-      text: (el.textContent || "").replace(/\s+/g, " ").trim()
+      text: (el.textContent || "").replace(/\s+/g, " ").trim(),
     }))
-    .filter(item => item.text.length > 0);
+    .filter((item) => item.text.length > 0);
 
   // On vide tous les textes au départ
   for (const item of items) {
@@ -26,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Réglages
-  const baseSpeed = 18;           // vitesse moyenne
-  const punctuationPause = 180;   // pause après . , ! ? etc
+  const baseSpeed = 18; // vitesse moyenne
+  const punctuationPause = 180; // pause après . , ! ? etc
   const betweenElementsPause = 120;
 
   let index = 0;
