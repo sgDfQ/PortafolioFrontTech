@@ -1,3 +1,10 @@
+  // ===== START MATRIX BACKGROUND =====
+  const main = document.querySelector("#matrix");
+  if (main) {
+    for (let i = 0; i < 50; ++i) {
+      new Rain({ target: main, row: 50 });
+    }
+  }
 document.addEventListener("DOMContentLoaded", () => {
   // On vise les éléments qui contiennent du texte (toute la page)
   // Select main textual elements but exclude anchors and nav/footer content
@@ -59,4 +66,19 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   typeNextElement();
+});
+// (1) code Matrix du CodePen ici : Rain, etc.
+
+document.addEventListener("DOMContentLoaded", () => {
+  // (2) ton code typewriter existant, inchangé
+
+  typeNextElement();
+
+  // (3) START MATRIX
+  const main = document.querySelector("#matrix");
+  if (main) {
+    for (let i = 0; i < 50; ++i) {
+      new Rain({ target: main, row: 50 });
+    }
+  }
 });

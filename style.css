@@ -82,7 +82,7 @@ nav {
 } /* ===== HERO SECTION ===== */
 .hero {
   background-color: #010000;
-  background-color: rgb(1 0 0 / 94.7%);
+  background-color: rgb(1 0 0 / 70%);
   color: #03a062;
   padding: 120px 0;
   text-align: center;
@@ -124,7 +124,7 @@ nav {
 } /* ===== ABOUT SECTION ===== */
 .about {
   background-color: #010000;
-  background-color: rgb(1 0 0 / 94.7%);
+  background-color: rgb(1 0 0 / 70%);
   padding: 120px 0;
 }
 
@@ -174,7 +174,7 @@ nav {
 } /* ===== SKILLS SECTION ===== */
 .skills {
   background-color: #010000;
-  background-color: rgb(1 0 0 / 94.7%);
+  background-color: rgb(1 0 0 / 70%);
   padding: 120px 0;
 }
 
@@ -236,7 +236,7 @@ nav {
 } /* ===== PROJECTS SECTION ===== */
 .projects {
   background-color: #010000;
-  background-color: rgb(1 0 0 / 94.7%);
+  background-color: rgb(1 0 0 / 70%);
   padding: 120px 0;
 }
 
@@ -267,13 +267,14 @@ nav {
   height: 180px;
   border-radius: 16px;
   overflow: auto;
-  display: flex;
+  display: auto;
   align-items: center;
   justify-content: center;
   color: #010000;
   color: rgb(1 0 0 / 94.7%);
   font-size: 1.3rem;
   font-weight: 600;
+  object-fit: contain
 }
 
 .project-content {
@@ -305,7 +306,7 @@ nav {
 } /* ===== CONTACT SECTION / FORM ===== */
 .contact {
   background-color: #010000;
-  background-color: rgb(1 0 0 / 94.7%);
+  background-color: rgb(1 0 0 / 70%);
   padding: 120px 0;
 }
 
@@ -523,4 +524,37 @@ footer {
   50% {
     opacity: 0;
   }
+}
+/* ===== MATRIX BACKGROUND FULL PAGE (SCROLL SAFE) ===== */
+
+#matrix-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  background: #000;
+}
+
+/* conteneur de colonnes */
+#matrix {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+/* caractères */
+#matrix p { line-height: 1; }
+
+#matrix span {
+  display: block;
+  width: 2vmax;
+  height: 2vmax;
+  font-size: 2vmax;
+  color: #9bff9b22;         /* un peu + visible */
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+}
+#matrix span.active {
+  color: #03ff03;          /* vert vif pour le caractère actif */
 }
